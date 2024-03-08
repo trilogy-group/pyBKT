@@ -12,11 +12,11 @@ from _collections import defaultdict
 pd.set_option('display.max_rows', None)
 
 PARAMS = {
-    'prior': 0.55,
-    'learns': np.array([0.15]),
-    'guesses': np.array([0.1]),
+    'prior': 0.16,
+    'learns': np.array([0.14]),
+    'guesses': np.array([0.118]),
     'slips': np.array([0.1]),
-    'forgets': np.array([0.03])
+    'forgets': np.array([0.0])
     }
 
 start = datetime.now()
@@ -146,6 +146,7 @@ def main(data_file):
         else:
             new_params = generate_random_params()
         new_result, preds_df = evaluate_params(data_file, new_params)
+        print(preds_df)
         if new_result_better(best_result, new_result):
             print('New best result!')
             print_stats(new_result)
@@ -161,7 +162,6 @@ def main(data_file):
     print(f'Iteration {best_iter}')
     print_stats(best_result)
     
-
 if __name__ == '__main__':
     data_file = sys.argv[1]
     main(data_file)
