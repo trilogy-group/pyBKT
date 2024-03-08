@@ -9,7 +9,7 @@ from pyBKT.util import print_dot
 num_subparts = 4
 num_resources = 2
 num_fit_initializations = 25
-observation_sequence_lengths = np.full(50, 100, dtype=np.int)
+observation_sequence_lengths = np.full(50, 100, dtype=np.int32)
 
 #generate synthetic model and data.
 #model is really easy.

@@ -6,7 +6,7 @@ from pyBKT.fit import predict_onestep
 num_subparts = 1
 num_resources = 2
 num_fit_initializations = 10
-observation_sequence_lengths = np.full(500, 100, dtype=np.int)
+observation_sequence_lengths = np.full(500, 100, dtype=np.int32)
 
 #generate synthetic model and data.
 #model is really easy.
