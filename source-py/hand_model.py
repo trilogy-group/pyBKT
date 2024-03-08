@@ -138,7 +138,7 @@ def main(data_file):
     best_params = None
     best_result = {'rmse': 0, 'auc': 0, 'mae': 0}
     best_iter = 0
-    iterations = 1
+    iterations = 1000
     for i in range(iterations):
         timeprint(f'Param testing iteration {i+1} of {iterations}...')
         if i == 0:
